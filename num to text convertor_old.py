@@ -1,11 +1,14 @@
-#infinite num to text convertor
+#infinite number to text convertor
 import time
+#List of words 
 list1=('','One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine')
 list2=('', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Ninteen')
 list3=('', 'Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninty')
 list4=('', "Hundred", 'Thousand', 'Lakh', 'Crore')
+#main function for get num in digit and convert in to text
 def num2text(num, recursion=0):
 	if num==0:
+		#if num == 0 and only digit 
 		return 'Zero'
 	else:
 		num_list=[]
@@ -13,6 +16,7 @@ def num2text(num, recursion=0):
 		num_text=()
 		
 		while (num!=0):
+			#loop for num to a list 
 			num_list.append(num%10)
 			num//=10
 		num_list.reverse()
